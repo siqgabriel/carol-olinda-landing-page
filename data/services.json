@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Desenvolvimento de Lideranças",
+    "img": "/assets/imgs/serv-icons/3.png",
+    "desc": "Programas estruturados para formar líderes mais preparados para decisões, gestão de pessoas e resultados sustentáveis.",
+    "link": "/page-services-details"
+  },
+  {
+    "title": "Estratégias de Educação Corporativa",
+    "img": "/assets/imgs/serv-icons/4.png",
+    "desc": "Criação de modelos educacionais modernos que transformam conhecimento em performance dentro das organizações.",
+    "link": "/page-services-details"
+  },
+  {
+    "title": "Cultura Organizacional e Comportamento",
+    "img": "/assets/imgs/serv-icons/5.png",
+    "desc": "Diagnósticos e intervenções que fortalecem cultura, engajamento e alinhamento entre líderes, equipes e estratégia.",
+    "link": "/page-services-details"
+  },
+  {
+    "title": "Arquitetura de Aprendizagem",
+    "img": "/assets/imgs/serv-icons/5.png",
+    "desc": "Desenho de jornadas de aprendizagem, trilhas de desenvolvimento e universidades corporativas orientadas a resultados.",
+    "link": "/page-services-details"
+  }
+]
