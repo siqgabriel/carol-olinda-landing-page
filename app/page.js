@@ -19,7 +19,7 @@ import Clients from '@/components/common/Clients';
 import Blog from '@/components/home-creative-agency/Blog';
 
 export const metadata = {
-  title: 'webfolio',
+  title: 'Carol Olinda',
   icons: {
     icon: '/assets/imgs/favicon.ico',
     shortcut: '/assets/imgs/favicon.ico',

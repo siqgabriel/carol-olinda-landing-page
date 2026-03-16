@@ -1,7 +1,7 @@
 'use client';
 import loadBackgroudImages from '@/common/loadBackgroudImages';
 import React, { useEffect } from 'react';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Testimonials() {
@@ -17,6 +17,7 @@ function Testimonials() {
     navigation: {
       nextEl: '.testimonials-minim .swiper-button-next',
       prevEl: '.testimonials-minim .swiper-button-prev',
+      addIcons: false,
     },
   };
   useEffect(() => {

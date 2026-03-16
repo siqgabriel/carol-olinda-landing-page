@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import data from '@/data/portfolios/works1';
-import { Navigation, Pagination } from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 function Portfolio() {
@@ -20,6 +20,7 @@ function Portfolio() {
     navigation: {
       nextEl: '.work-crev .swiper-button-next',
       prevEl: '.work-crev .swiper-button-prev',
+      addIcons: false,
     },
   };
   return (
