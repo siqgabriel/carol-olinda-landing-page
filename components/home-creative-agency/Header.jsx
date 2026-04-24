@@ -1,10 +1,26 @@
 'use client';
-import React, { useEffect, useLayoutEffect } from 'react';
+import React, { useEffect, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import loadBackgroudImages from '@/common/loadBackgroudImages';
 
-
 function Header() {
+  const [bgImage, setBgImage] = useState('/assets/imgs/header/foto-carol.webp');
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 600) {
+        setBgImage('/assets/imgs/header/foto-carol-mobile.webp');
+      } else {
+        setBgImage('/assets/imgs/header/foto-carol.webp');
+      }
+    };
+
+    handleResize(); // roda ao carregar
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useLayoutEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo('.header', { y: 200 }, { y: 0 }, '+=2.5');
@@ -17,15 +33,16 @@ function Header() {
 
     return () => tl.kill();
   }, []);
+
   useEffect(() => {
     loadBackgroudImages();
-  }, []);
+  }, [bgImage]);
   return (
     <div className="header crev-header bg-img">
       <div className="container ontop">
         <div className="row justify-content-end">
           <div className="col-lg-12">
-            <div className="caption mb-100">
+            <div className="caption">
               <div className="row">
                 <div className="col-lg-8">
                   <h1 className="text-u">Líderes</h1>
@@ -33,7 +50,7 @@ function Header() {
                 </div>
                 <div className="col-lg-4 d-flex justify-content-end">
                   <div className="circle-button md-hide">
-                    <a href="https://youtu.be/AzwC6umvd1s" className="vid">
+                    <a href="https://wa.me//5511980377866?text=Ol%C3%A1%20Carol!%20Vim%20pelo%20site,%20vamos%20marcar%20um%20bate-papo?" className="vid" target='_blank'>
                       <div className="rotate-circle fz-30 text-u">
                         <svg className="textcircle" viewBox="0 0 500 500">
                           <defs>
@@ -58,7 +75,7 @@ function Header() {
               </div>
               <div className="row text-left align-items-center">
                 <div className="col-lg-3 order-md-2">
-                  <p>
+                  <p style={{ fontSize: '12px' }}>
                     Desenvolva líderes, fortaleça cultura organizacional e acelere aprendizagem estratégica com métodos científicos e experiência prática.
                   </p>
                 </div>
@@ -71,7 +88,7 @@ function Header() {
           <div className="col-lg-12">
             <div
               className="full-img bg-img"
-              data-background="/assets/imgs/header/foto-carol.webp"
+              data-background={bgImage}
             ></div>
           </div>
         </div>

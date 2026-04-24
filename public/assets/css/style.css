@@ -3735,7 +3735,7 @@ body.loaded {
 }
 
 .sub-title {
-  font-size: 14px;
+  font-size: 10px;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
@@ -4869,6 +4869,10 @@ footer.clean-footer.crev .circle-blur {
   overflow: hidden;
 }
 
+.caption {
+  margin-bottom: 100px;
+}
+
 .main-header .caption h1 {
   font-size: 105px;
   font-family: 'Black Mango' !important;
@@ -4888,7 +4892,37 @@ footer.clean-footer.crev .circle-blur {
   width: calc(100% + 30vw);
   height: 750px;
   background-position: center center;
-    transform: translateY(-200px);
+  transform: translate(-180px, -200px);
+}
+
+@media screen and (max-width: 1199px) {
+  .caption {
+    margin-bottom: 150px;
+  }
+
+  .crev-header {
+    padding: 60px 0 0;
+    position: relative;
+  }
+
+  .crev-header .full-img {
+    position: relative;
+    width: calc(100% + 30vw);
+    height: 750px;
+    background-position: center right;
+      transform: translateY(-200px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .caption {
+    margin-bottom: 30px;
+  }
+
+  .crev-header {
+    padding: 50px 0;
+    position: relative;
+  }
 }
 
 .crev-header .full-img:after {
@@ -4911,7 +4945,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .crev-header .caption h1 {
-  font-size: 90px;
+  font-size: 76px;
   font-family: 'Black Mango' !important;
 }
 
@@ -6343,7 +6377,7 @@ footer.clean-footer.crev .circle-blur {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 15px;
   padding: 40px 30px;
-  width: 350px;
+  width: 300px;
   height: 450px;
   margin: 0 4px;
   display: -webkit-box;
@@ -6362,7 +6396,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .services-modern .item.active {
-  width: calc(100vw - 350px * 3);
+  width: calc(100vw - 280px * 3);
 }
 
 .services-modern .item.active p {
@@ -6376,6 +6410,50 @@ footer.clean-footer.crev .circle-blur {
   -ms-transform: translate(0);
   transform: translate(0);
 }
+
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 12px;
+  font-weight: 500;
+
+  padding: 10px 22px;
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+
+  text-decoration: none;
+
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ícone */
+.btn-whatsapp .icon {
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+/* Hover geral */
+.btn-whatsapp:hover {
+  background-color: rgb(224, 8, 128); /* cor do WhatsApp */
+  border-color: rgb(224, 8, 128);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(224, 8, 128, 0.25);
+}
+
+/* Animação do ícone */
+.btn-whatsapp:hover .icon {
+  transform: scale(1.2) rotate(-5deg);
+}
+
+
 
 .services-modern .item h6 {
   font-size: 12px !important;
@@ -6391,7 +6469,7 @@ footer.clean-footer.crev .circle-blur {
 }
 
 .services-modern .item p {
-  font-size: 20px;
+  font-size: 18px;
   text-indent: 15%;
   opacity: 0;
   -webkit-transition: opacity 0.1s ease-out, -webkit-transform 0.4s ease-out,
@@ -6411,6 +6489,53 @@ footer.clean-footer.crev .circle-blur {
   -webkit-transform: translateX(50px);
   -ms-transform: translateX(50px);
   transform: translateX(50px);
+}
+
+@media screen and (max-width: 1200px) {
+  .services-modern .serv-boxs {
+    display: block;
+    margin: 0 20px;
+  }
+    .services-modern .item {
+    width: 100%;
+    padding: 60px 40px;
+    margin: 5px 0;
+  }
+  .services-modern .item p {
+    opacity: 1;
+    -webkit-clip-path: none !important;
+    clip-path: none !important;
+    text-indent: 0;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+  }
+  .services-modern .item.active {
+    width: 100% !important;
+  }
+}
+
+.foto-carol {
+  width: 100% !important;
+}
+
+.cont {
+  width: 1000px;
+}
+
+@media screen and (max-width: 1200px) {
+  .cont {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .chose {
+    margin-bottom: 50px;
+  }
+  .chose-carol {
+    display: none;
+  }
 }
 
 .services-clas .item {
@@ -8090,26 +8215,6 @@ footer.clean-footer.crev .circle-blur {
   .numbers-crev .item h3 {
     font-size: 80px;
   }
-  .services-modern .serv-boxs {
-    display: block;
-  }
-  .services-modern .item {
-    width: 100%;
-    padding: 60px 40px;
-    margin: 5px 0;
-  }
-  .services-modern .item p {
-    opacity: 1;
-    -webkit-clip-path: none !important;
-    clip-path: none !important;
-    text-indent: 0;
-    -webkit-transform: none;
-    -ms-transform: none;
-    transform: none;
-  }
-  .services-modern .item.active {
-    width: 100% !important;
-  }
   .work-fade .text.pb-100 {
     padding-bottom: 50px !important;
   }
@@ -8276,7 +8381,7 @@ footer.clean-footer.crev .circle-blur {
   }
   .main-header .caption h1,
   .crev-header .caption h1 {
-    font-size: 40px;
+    font-size: 33px;
   }
   .main-header .icon-img {
     width: 100px;

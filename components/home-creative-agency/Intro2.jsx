@@ -13,12 +13,12 @@ function Intro2() {
     event.currentTarget.nextElementSibling.classList.add('active');
   }
   return (
-    <section className="intro-accord sub-bg o-hidden">
-      <div className="container ontop">
+    <section className="intro-accord sub-bg o-hidden ">
+      <div className="container ontop chose">
         <div className="row xlg-marg">
           <div className="col-lg-6">
             <div className="img md-mb50">
-              <img src="/assets/imgs/header/foto-carol3.webp" alt="" />
+              <img src="/assets/imgs/header/foto-carol3.webp" alt="Carol" className='chose-carol' />
             </div>
           </div>
           <div className="col-lg-6 valign">
